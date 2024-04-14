@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import StateExample from './03/StateExample';
+import LifecycleExample from './03/LifecycleExample';
+// import StateExample from './03/StateExample';
 // import ChildProperty from './03/ChildProperty';
 // import DefaultPropsComponent from './03/DefaultPropsComponent';
 // import ChildComponent2 from './03/ChildComponent2';
@@ -27,7 +28,8 @@ class App extends React.Component {
       // <ChildProperty>
       //   <div>이게 나온다고?</div>
       // </ChildProperty>
-      <StateExample />
+      // <StateExample />
+      <LifecycleExample />
     );
   }
 }

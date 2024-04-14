@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
-import LifecycleExample from './03/LifecycleExample';
+import Counter2 from './03/Counter2';
+// import ListExample from './03/ListExample';
+// import SFC from './03/SFC';
+// import LifecycleExample from './03/LifecycleExample';
 // import StateExample from './03/StateExample';
 // import ChildProperty from './03/ChildProperty';
 // import DefaultPropsComponent from './03/DefaultPropsComponent';
@@ -8,6 +11,18 @@ import LifecycleExample from './03/LifecycleExample';
 // import ChildComponent from './03/ChildComponent';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 1,
+    };
+    this.increaseCount = this.increaseCount.bind(this);
+  }
+
+  increaseCount() {
+    this.setState(({ count }) => ({ count: count + 1 }));
+  }
+
   render() {
     // const arr = [1, 2, 3];
     // const obj = { name: '제목', age: 30 };
@@ -29,7 +44,10 @@ class App extends React.Component {
       //   <div>이게 나온다고?</div>
       // </ChildProperty>
       // <StateExample />
-      <LifecycleExample />
+      // <LifecycleExample />
+      // <SFC />
+      // <ListExample />
+      <Counter2 count={this.state.count} onAdd={this.increaseCount} />
     );
   }
 }
